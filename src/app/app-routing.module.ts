@@ -3,8 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {path:"",loadChildren: () => import("./views/cctx-dev").then(m => m.CCTXDevModule)},
-  {path:"hm",loadChildren: () => import("./views/home-orig").then(m => m.HomeOrigModule)},
-  {path:"hm2",loadChildren: () => import("./views/home").then(m => m.HomeModule)},
+  {path:"hm",loadChildren: () => import("./views/home").then(m => m.HomeModule)},
   {path:"test-one",loadChildren: () => import("./views/test-one").then(m => m.TestOneModule)},
   {path:"test-two",loadChildren: () => import("./views/test-two").then(m => m.TestTwoModule)},
   //{path:"nitch",loadChildren: () => import("./apps/nitch").then(m => m.NitchModule)},
