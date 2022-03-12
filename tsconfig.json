@@ -2,7 +2,19 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
+    "paths": {
+      "@env/*": ["environments/*"],
+      "@layout": ["app/layout"],
+      "@shared": ["app/shared"],
+      "@state": ["app/state"],
+      "@cctx-dev/*": ["app/cctx-dev/*"],
+      "@cctx-dev-layout": ["app/cctx-dev/layout"],
+      "@cctx-dev-state": ["app/cctx-dev/state"],
+      "@api": ["app/__api"],
+      "@js":["assets/js"],
+      "@css":["assets/css"],
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
