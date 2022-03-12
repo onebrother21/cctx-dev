@@ -1,8 +1,11 @@
-import { BannerComponent } from './banner';
-import { LinksComponent } from './links';
-import { NextStepsComponent } from './next-steps';
-import { ResourcesComponent } from './resources';
-import { TerminalComponent } from './terminal';
+import { BannerComponent } from './ng-starter-banner';
+import { CCTXDevIconComponent } from './cctx-dev-icon';
+import { CCTXDevIconMenuComponent } from './cctx-dev-icon-menu';
+import { CCTXDevIconMenuItemComponent } from './cctx-dev-icon-menu-item';
+import { LinksComponent } from './ng-starter-links';
+import { NextStepsComponent } from './ng-starter-next-steps';
+import { ResourcesComponent } from './ng-starter-resources';
+import { TerminalComponent } from './ng-starter-terminal';
 
 export const COMPONENTS = [
   BannerComponent,
@@ -10,4 +13,7 @@ export const COMPONENTS = [
   NextStepsComponent,
   TerminalComponent,
   LinksComponent,
+  CCTXDevIconComponent,
+  CCTXDevIconMenuComponent,
+  CCTXDevIconMenuItemComponent
 ];

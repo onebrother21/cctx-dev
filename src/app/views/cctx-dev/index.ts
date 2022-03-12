@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CoreLayoutModule } from '../../layout';
 import { SharedModule } from '../../shared';
 import { COMPONENTS ,CCTXDevRoutingModule } from './routing';
 
@@ -6,7 +7,9 @@ import { COMPONENTS ,CCTXDevRoutingModule } from './routing';
   declarations: [...COMPONENTS],
   imports: [
     SharedModule,
-    CCTXDevRoutingModule
+    CCTXDevRoutingModule,
+    CoreLayoutModule,
+
   ],
   exports:[...COMPONENTS],
 })
