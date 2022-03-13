@@ -1,5 +1,5 @@
 import { Component,Input,Output,EventEmitter,ViewEncapsulation } from '@angular/core';
-import { CCTXDevIcon } from '../../types';
+import { CCTXDevIcon } from '../../../state/types';
 
 @Component({
   selector: 'cctx-dev-icon-menu',

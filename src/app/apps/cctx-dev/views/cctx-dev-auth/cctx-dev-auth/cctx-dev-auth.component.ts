@@ -4,7 +4,7 @@ import { AppService } from "@state";
 import {
   ContactUsActions as ContactUs,ContactUsMsg,contactUsMsg$,
   NavigationActions as Navigation,
-} from "app/apps/cctx-dev/state";
+} from "@cctx-state";
 import { Observable } from "rxjs";
 import { CCTXDevAuthService } from "../cctx-dev-auth.service";
 

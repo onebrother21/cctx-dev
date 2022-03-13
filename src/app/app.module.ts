@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { SharedModule } from './shared';
-import { AppLayoutModule } from './layout';
 import { AppStateModule } from './state';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +13,6 @@ import { AppComponent } from './app.component';
     SharedModule,
     AppRoutingModule,
     AppStateModule,
-    AppLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

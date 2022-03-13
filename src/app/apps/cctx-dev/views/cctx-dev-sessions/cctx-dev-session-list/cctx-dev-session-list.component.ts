@@ -1,10 +1,9 @@
-import { Component,ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'cctx-dev-session-list',
   templateUrl: './cctx-dev-session-list.component.html',
   styleUrls: ['./cctx-dev-session-list.component.scss'],
-  //encapsulation:ViewEncapsulation.None
 })
 export class CCTXDevSessionListComponent {
   title = "cctx-dev-session-list";

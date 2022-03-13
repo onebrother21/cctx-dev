@@ -21,4 +21,4 @@ import { CCTXDevSharedRoutingModule } from "./routing";
   ],
 })
 export class CCTXDevSharedModule { }
-export * from "../state/types";
+export * from "./types";

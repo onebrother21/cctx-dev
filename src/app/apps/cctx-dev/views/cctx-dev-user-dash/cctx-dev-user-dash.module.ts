@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@shared';
+import { CCTXDevSharedModule } from '@cctx-shared';
 import { COMPONENTS ,CCTXDevUserDashRoutingModule } from './cctx-dev-user-dash-routing.module';
 import { CCTXDevUserDashService } from './cctx-dev-user-dash.service';
 
@@ -7,7 +8,8 @@ import { CCTXDevUserDashService } from './cctx-dev-user-dash.service';
   declarations: [...COMPONENTS],
   imports: [
     SharedModule,
-    CCTXDevUserDashRoutingModule
+    CCTXDevUserDashRoutingModule,
+    CCTXDevSharedModule,
   ],
   exports:[...COMPONENTS],
   providers:[CCTXDevUserDashService],
