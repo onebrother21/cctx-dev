@@ -13,12 +13,12 @@ export class CCTXDevAuthService {
   send(o:any){this.app.do(Navigation.go({url:this.getNextAuthPage(o.type)}));}
   getNextAuthPage(type:string){
     switch(type){
-      case "signup":return "/secure01/verify";
-      case "verify":return "/secure01/register";
-      case "register":return "/secure01/update-pin";
-      case "signin":return "/secure01/login";
+      case "signup":return "/secur01/verify";
+      case "verify":return "/secur01/register";
+      case "register":return "/secur01/update-pin";
+      case "signin":return "/secur01/login";
       case "update-pin":
-      case "login":return "/dash";
+      case "login":return "/user";
       default:return "/";
     }
   }

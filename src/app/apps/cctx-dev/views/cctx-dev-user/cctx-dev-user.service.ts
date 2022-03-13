@@ -3,10 +3,10 @@ import { Subject } from "rxjs";
 import { CCTXDevIcon } from '@cctx-state';
 
 @Injectable()
-export class CCTXDevUserDashService {
-  private userDashAction = new Subject<any>();
-  userDashAction$ = this.userDashAction.asObservable();
-  send(change:any){this.userDashAction.next(change);}
+export class CCTXDevUserService {
+  private userAction = new Subject<any>();
+  userAction$ = this.userAction.asObservable();
+  send(change:any){this.userAction.next(change);}
   menu:CCTXDevIcon[] = [
     {
       label:"Launch Session",
@@ -26,7 +26,7 @@ export class CCTXDevUserDashService {
     },{
       label:"Account and Settings",
       text:"View or update my account details.",
-      url:"/cctx/secure01",
+      url:"/cctx/user/me",
       type:"lock",
     },
   ];
