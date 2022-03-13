@@ -4,6 +4,8 @@ import { Injectable } from "@angular/core";
 
 export class AppWindowService {
   scroll:number = 0;
+  //constructor(private window:Window){}
+  scrollUp(){window.scrollTo({top:0});}
   async pseudofier(){
     const {
       navigator:{appName,appVersion,doNotTrack,cookieEnabled,plugins,mimeTypes,userAgent,geolocation},
