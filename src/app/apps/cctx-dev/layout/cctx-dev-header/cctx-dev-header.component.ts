@@ -1,4 +1,5 @@
-import { Component,ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
+import { CCTXDevIcon } from '@cctx-shared';
 
 @Component({
   selector: 'cctx-dev-header',
@@ -8,4 +9,5 @@ import { Component,ViewEncapsulation } from '@angular/core';
 })
 export class CCTXDevHeaderComponent {
   title = "cctx-dev-header";
+  item:CCTXDevIcon = {label:"Menu Button",type:"hamburger"};
 }

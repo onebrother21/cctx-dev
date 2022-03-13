@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@shared';
-import { COMPONENTS } from "./components";
+import { CCTXDevSharedModule } from '@cctx-shared';
+import { COMPONENTS,CCTXDevLayoutRoutingModule } from "./routing";
 
 @NgModule({
   declarations: [...COMPONENTS],
-  imports: [SharedModule],
+  imports: [
+    SharedModule,
+    CCTXDevSharedModule,
+    CCTXDevLayoutRoutingModule,
+  ],
   exports:[...COMPONENTS],
 })
 
