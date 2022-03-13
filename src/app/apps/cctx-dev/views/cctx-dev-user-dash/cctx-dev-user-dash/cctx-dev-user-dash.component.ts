@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { CCTXDevIcon, ICONS } from '@cctx-state';
+import { CCTXDevIcon } from '@cctx-state';
+import { CCTXDevUserDashService } from '../cctx-dev-user-dash.service';
 
 @Component({
   selector: 'cctx-dev-user-dash',
@@ -8,6 +9,7 @@ import { CCTXDevIcon, ICONS } from '@cctx-state';
 })
 export class CCTXDevUserDashComponent {
   title = "cctx-dev-user-dash";
-  menu:CCTXDevIcon[] = ICONS;
+  menu:CCTXDevIcon[] = this.userDash.menu;
+  constructor(private userDash:CCTXDevUserDashService){}
   selectItem(item:CCTXDevIcon){console.log(item);}
 }

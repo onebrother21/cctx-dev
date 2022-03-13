@@ -6,7 +6,6 @@ import { CCTXDevAuthService } from '../cctx-dev-auth.service';
   selector: 'cctx-dev-auth-verify',
   templateUrl: './cctx-dev-auth-verify.component.html',
   styleUrls: ['./cctx-dev-auth-verify.component.scss'],
-  //encapsulation:ViewEncapsulation.None
 })
 export class CCTXDevAuthVerifyComponent {
   title = "cctx-dev-auth-verify";

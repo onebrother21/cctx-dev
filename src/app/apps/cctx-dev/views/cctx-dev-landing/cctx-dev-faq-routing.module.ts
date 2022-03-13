@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CCTXDevFAQComponent } from './cctx-dev-faq';
+import { CCTXDevFAQComponent } from './cctx-dev-landing';
 
 const routes: Routes = [
   {path:"",component:CCTXDevFAQComponent},

@@ -6,7 +6,6 @@ import { CCTXDevAuthService } from '../cctx-dev-auth.service';
   selector: 'cctx-dev-auth-signup',
   templateUrl: './cctx-dev-auth-signup.component.html',
   styleUrls: ['./cctx-dev-auth-signup.component.scss'],
-  //encapsulation:ViewEncapsulation.None
 })
 export class CCTXDevAuthSignUpComponent {
   title = "cctx-dev-auth-signup";

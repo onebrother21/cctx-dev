@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { CCTXDevIcon, ICONS } from '@cctx-state';
+import { CCTXDevIcon } from '@cctx-state';
+import { CCTXDevIconMenuDivService } from '../cctx-dev-icon-menu-div.service';
 
 @Component({
   selector: 'cctx-dev-icon-menu-div',
@@ -8,5 +9,7 @@ import { CCTXDevIcon, ICONS } from '@cctx-state';
 })
 export class CCTXDevIconMenuDivComponent {
   title = "cctx-dev-icon-menu-div";
-  menu:CCTXDevIcon[] = ICONS;
+  menu:CCTXDevIcon[] = this.iconMenuDiv.menu;
+  constructor(private iconMenuDiv:CCTXDevIconMenuDivService){}
+  selectItem(item:CCTXDevIcon){console.log(item);}
 }
