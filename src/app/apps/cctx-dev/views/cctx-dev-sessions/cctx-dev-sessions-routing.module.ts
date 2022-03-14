@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CCTXDevSessionComponent } from './cctx-dev-session';
+import { CCTXDevSessionEditorComponent } from './cctx-dev-session-editor';
 import { CCTXDevSessionListComponent } from './cctx-dev-session-list';
-import { CCTXDevSessionsComponent } from './cctx-dev-sessions';
+import { CCTXDevSessionRoomComponent } from './cctx-dev-session-room';
 
 const routes: Routes = [
-  {path:"",component:CCTXDevSessionsComponent,children:[
-    {path:"",redirectTo:"recent",pathMatch:"full"},
-    {path:"recent",component:CCTXDevSessionListComponent},
-    {path:"new",component:CCTXDevSessionComponent},
-    {path:":id",component:CCTXDevSessionComponent},
-  ]},
+  {path:"",redirectTo:"recent",pathMatch:"full"},
+  {path:"recent",component:CCTXDevSessionListComponent},
+  {path:"new",component:CCTXDevSessionEditorComponent},
+  {path:"room/:id",component:CCTXDevSessionRoomComponent},
+  {path:":id",component:CCTXDevSessionComponent},
 ];
 
 @NgModule({
@@ -19,7 +19,8 @@ const routes: Routes = [
 })
 export class CCTXDevSessionsRoutingModule { }
 export const COMPONENTS = [
-  CCTXDevSessionsComponent,
   CCTXDevSessionComponent,
+  CCTXDevSessionRoomComponent,
   CCTXDevSessionListComponent,
+  CCTXDevSessionEditorComponent,
 ];

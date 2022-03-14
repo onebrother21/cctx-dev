@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@shared';
+import { CCTXDevSharedModule } from '@cctx-shared';
 import { COMPONENTS ,CCTXDevSessionsRoutingModule } from './cctx-dev-sessions-routing.module';
 import { CCTXDevSessionsService } from './cctx-dev-sessions.service';
 
@@ -7,7 +8,8 @@ import { CCTXDevSessionsService } from './cctx-dev-sessions.service';
   declarations: [...COMPONENTS],
   imports: [
     SharedModule,
-    CCTXDevSessionsRoutingModule
+    CCTXDevSessionsRoutingModule,
+    CCTXDevSharedModule,
   ],
   exports:[...COMPONENTS],
   providers:[CCTXDevSessionsService],

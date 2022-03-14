@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class CCTXDevUserAccountComponent {
   title = "cctx-dev-user-account";
+  editAccount(){console.log("fields now open to edit");}
 }

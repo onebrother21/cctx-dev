@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CCTXDevIconMenuDivComponent } from './cctx-dev-icon-menu-div';
+import { CCTXDevHomeComponent } from './cctx-dev-home';
 
 const routes: Routes = [
-  {path:"",component:CCTXDevIconMenuDivComponent},
+  {path:"",component:CCTXDevHomeComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CCTXDevIconMenuDivRoutingModule { }
+export class CCTXDevHomeRoutingModule { }
 export const COMPONENTS = [
-  CCTXDevIconMenuDivComponent,
+  CCTXDevHomeComponent,
 ];

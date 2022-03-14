@@ -11,3 +11,5 @@ export type CCTXDevMediaSession = {
   lastUpd:string|Date;
   collaborators:CCTXDevMediaSessionMember[];
 };
+
+export type CCTXDevMediaSessionComment = {user:string;body:string;};

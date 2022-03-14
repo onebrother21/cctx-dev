@@ -1,12 +1,15 @@
 import { Injectable } from "@angular/core";
-import { Subject } from "rxjs";
-import { CCTXDevIcon } from '@cctx-state';
+import { AppService } from "@state";
+import {
+  CCTXDevIcon,
+  ContactUsActions as ContactUs,ContactUsMsg,contactUsMsg$,
+  NavigationActions as Navigation,
+} from "@cctx-state";
+import { Observable } from "rxjs";
 
 @Injectable()
 export class CCTXDevUserService {
-  private userAction = new Subject<any>();
-  userAction$ = this.userAction.asObservable();
-  send(change:any){this.userAction.next(change);}
+  contactUsMsg:Observable<ContactUsMsg|null> = new Observable();
   menu:CCTXDevIcon[] = [
     {
       label:"Launch Session",
@@ -30,4 +33,17 @@ export class CCTXDevUserService {
       type:"lock",
     },
   ];
+  constructor(private app:AppService){this.contactUsMsg = this.app.select(contactUsMsg$);}
+  send(o:any){this.app.do(Navigation.go({url:this.getNextUserPage(o.type)}));}
+  getNextUserPage(type:string){
+    switch(type){
+      case "signup":return "/secur01/verify";
+      case "verify":return "/secur01/register";
+      case "register":return "/secur01/update-pin";
+      case "signin":return "/secur01/login";
+      case "update-pin":
+      case "login":return "/user";
+      default:return "/";
+    }
+  }
 }
