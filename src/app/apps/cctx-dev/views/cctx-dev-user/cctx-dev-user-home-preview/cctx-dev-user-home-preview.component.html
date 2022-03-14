@@ -1,0 +1,24 @@
+<h4 class="u-text u-text-grey-50 u-text-5">{{preview.title}}</h4>
+<div class="u-align-center u-container-style u-expanded-width u-group u-group-1">
+  <div class="u-container-layout u-valign-middle u-container-layout-3">
+    <div [ngClass]="preview.img?'u-image-'+preview.img:''"
+    class="u-align-center u-container-style u-image u-layout-cell u-right-cell u-size-35 u-size-xs-60" src="" data-image-width="1298" data-image-height="1080">
+      <div class="u-container-layout u-valign-bottom u-container-layout-1" src=""></div>
+    </div>
+  </div>
+</div>
+<p class="u-text u-text-7">
+  <strong><ng-container *ngFor="let member of preview.members;let i = index">
+    {{member.name + (i == preview.members.length - 1?'':', ')}}</ng-container>
+  </strong><br>
+  <strong>Runtime: </strong>{{preview.duration}} <br>
+  {{preview.views}} Views <br>
+  {{preview.comments}} comments <br>
+</p>
+<!--div class="u-container-style u-expanded-width u-group u-palette-1-base u-group-2">
+  <div class="u-container-layout u-valign-middle u-container-layout-5">
+    <h2 class="u-align-center u-text u-text-9">$ 59</h2>
+  </div>
+</div-->
+<a routerLink="/cctx/sessions/room/1" class="u-border-none u-btn u-btn-round u-button-style u-grey-15 u-hover-palette-1-base u-radius-8 u-btn-1">
+  join</a>

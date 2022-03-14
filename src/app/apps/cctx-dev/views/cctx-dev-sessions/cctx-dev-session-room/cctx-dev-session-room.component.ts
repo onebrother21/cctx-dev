@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild,ElementRef } from '@angular/core';
 import { FormGroup,FormBuilder,Validators } from '@angular/forms';
 import { CCTXDevMediaSessionComment } from '@cctx-shared';
 import { CCTXDevSessionsService } from '../cctx-dev-sessions.service';
@@ -12,6 +12,10 @@ export class CCTXDevSessionRoomComponent {
   title = "cctx-dev-session-room";
   newComments:CCTXDevMediaSessionComment[] = [];
   blank = {type:"comment",body:"",user:"Jackswift"};
+  @ViewChild('videoPlayer') videoplayer:ElementRef = {} as ElementRef;
+  toggleVideo(event:any) {this.videoplayer.nativeElement.play();}
+  //class="u-image u-image-default u-image-1" 
+  //[muted]="true" data-image-width="900" data-image-height="635">
   sessionChatForm:FormGroup;
   constructor(private sessions:CCTXDevSessionsService,private fb:FormBuilder){
     this.sessions.newComment$.subscribe(comment => {

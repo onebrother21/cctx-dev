@@ -16,9 +16,9 @@ C6.9,115.6,25.2,125.2,43.2,126.9z"></path></svg>
               <h5 class="u-custom-font u-font-roboto-condensed u-text u-text-palette-1-base u-text-3"> {{session.title}}</h5>
               <p class="u-text u-text-palette-5-dark-2 u-text-4">
                 Collaborators:
-                <ng-container *ngFor="let o of session.collaborators;let j = index">
+                <ng-container *ngFor="let o of session.members;let j = index">
                   <a routerLink="/cctx/u/{{o.name.toLocaleLowerCase()}}"> {{o.name}}</a>
-                  <span *ngIf="j !== session.collaborators.length-1">,</span>
+                  <span *ngIf="j !== session.members.length-1">,</span>
                 </ng-container><br>
                 <em>Last updated: {{session.lastUpd}}.</em><br>
               </p>

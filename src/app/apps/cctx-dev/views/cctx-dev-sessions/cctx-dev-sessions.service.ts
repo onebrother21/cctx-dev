@@ -12,10 +12,10 @@ import { Observable, Subject } from "rxjs";
 export class CCTXDevSessionsService {
   contactUsMsg:Observable<ContactUsMsg|null> = new Observable();
   items:CCTXDevMediaSession[] = [
-    {id:"01",title:"Creamy Crack",lastUpd:"3/11/22 3:00pm",collaborators:[{name:"Jackswift"},{name:"BreezeAwesome"},{name:"ThatGirlNikki"}]},
-    {id:"02",title:"Project Anywhr",lastUpd:"3/11/22 3:00pm",collaborators:[{name:"Jackswift"}]},
-    {id:"03",title:"Superfye!",lastUpd:"3/10/22 11:00pm",collaborators:[{name:"Jackswift"}]},
-    {id:"04",title:"Pandora Bound",lastUpd:"3/9/22 5:45pm",collaborators:[{name:"Jackswift"}]},
+    {id:"01",title:"Creamy Crack",lastUpd:"3/11/22 3:00pm",members:[{name:"Jackswift"},{name:"BreezeAwesome"},{name:"ThatGirlNikki"}]},
+    {id:"02",title:"Project Anywhr",lastUpd:"3/11/22 3:00pm",members:[{name:"Jackswift"}]},
+    {id:"03",title:"Superfye!",lastUpd:"3/10/22 11:00pm",members:[{name:"Jackswift"}]},
+    {id:"04",title:"Pandora Bound",lastUpd:"3/9/22 5:45pm",members:[{name:"Jackswift"}]},
   ];
   private newComment = new Subject<CCTXDevMediaSessionComment>();
   newComment$ = this.newComment.asObservable();
@@ -44,7 +44,7 @@ export class CCTXDevSessionsService {
   }
   randomIntFromInterval(min:number,max:number){return Math.floor(Math.random() * (max - min + 1) + min);}
   addRandomComment(){
-    const times = [500,1000,2000,3000,4000,5000,10000];
+    const times = [500,1000,2000,3000,4000,5000];
     const rndMsg = this.randomIntFromInterval(0,this.msgs.length - 1);
     const rndAuthor = this.randomIntFromInterval(0,this.authors.length - 1);
     const rndTime = this.randomIntFromInterval(0,times.length - 1);
