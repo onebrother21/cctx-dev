@@ -126,7 +126,7 @@ export class CCTXDevUserService {
   ];
   ads = [
     {
-      header:"Stop pushing your clients into a corner.",
+      header:"I am an ad, please accidentally click me.",
       content:"Fames ac turpis egestas integer. Viverra orci sagittis eu volutpat odio. "
     },
   ];
