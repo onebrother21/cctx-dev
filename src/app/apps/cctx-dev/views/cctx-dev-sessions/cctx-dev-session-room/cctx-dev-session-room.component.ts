@@ -14,8 +14,6 @@ export class CCTXDevSessionRoomComponent {
   blank = {type:"comment",body:"",user:"Jackswift"};
   @ViewChild('videoPlayer') videoplayer:ElementRef = {} as ElementRef;
   toggleVideo(event:any) {this.videoplayer.nativeElement.play();}
-  //class="u-image u-image-default u-image-1" 
-  //[muted]="true" data-image-width="900" data-image-height="635">
   sessionChatForm:FormGroup;
   constructor(private sessions:CCTXDevSessionsService,private fb:FormBuilder){
     this.sessions.newComment$.subscribe(comment => {

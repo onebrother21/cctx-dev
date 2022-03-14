@@ -4,10 +4,10 @@ import { Constructor } from "../models";
 
 @Injectable({providedIn:"root"})
 export class AppUtilsService {
-  isProd = (o = false):o is boolean =>  env.prod;
+  isProd = (o = false):o is boolean =>  env.production || env.prod;
   isDebug = (o = false):o is boolean => env.debug;
-  cap = (s:string,all?:boolean) => all?s.toUpperCase():(s[0].toUpperCase()+s.substr(1));
-  low = (s:string,all?:boolean) => all?s.toLowerCase():(s[0].toLowerCase()+s.substr(1));
+  cap = (s:string,all?:boolean) => all?s.toUpperCase():(s[0].toUpperCase()+s.slice(1));
+  low = (s:string,all?:boolean) => all?s.toLowerCase():(s[0].toLowerCase()+s.slice(1));
   snake = (s:string) => {
     let newStr = "";
     for(let i =0;i<s.length;i++){
