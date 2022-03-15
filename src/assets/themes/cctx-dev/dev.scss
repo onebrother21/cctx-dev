@@ -13,6 +13,11 @@
   background-image: url("/assets/images/03.jpg");
   background-position: 50% 50%;
 }
+.u-image-small {
+  max-height:250px;
+  min-width:230px;
+  //background-position: 50% 50%;
+}
 .u-grey-10,
 .u-body.u-grey-10,
 .u-container-style.u-grey-10:before,
@@ -372,4 +377,14 @@ color: #e6e6e6;
 {
 background-color: #2a43b9;
 color: #e6e6e6;
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  .u-video-under-banner {
+    top:500px;
+  }
+}
+@media (max-width: 576px) {
+  .u-video-under-banner {
+    top:550px;
+  }
 }
