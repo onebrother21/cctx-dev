@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path:"",redirectTo:"cctx",pathMatch:"full"},
+  {path:"",redirectTo:"qs",pathMatch:"full"},
   {path:"qs",loadChildren: () => import("./apps/qs").then(m => m.QS_Module)},
   //{path:"hm",loadChildren: () => import("./ng-starter").then(m => m.HomeModule)},
   //{path:"test-one",loadChildren: () => import("./views/test-one").then(m => m.TestOneModule)},

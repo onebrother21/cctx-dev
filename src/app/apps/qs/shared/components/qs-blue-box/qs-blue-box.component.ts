@@ -8,6 +8,6 @@ import { QS_Ad } from '@qs-state';
 })
 export class QS_BlueBoxComponent {
   title = "qs-blue-box";
-  @Input() bluebox:QS_Ad = {header:"",content:""};
+  @Input() bluebox:QS_Ad = {type:"ad",header:"",content:""};
   @Output() select:EventEmitter<any> = new EventEmitter();
 }

@@ -3,9 +3,9 @@ import { AppError } from  "@state";
 import { AppLayout } from "../models";
 
 export const LayoutActions = {
-  scrollTop:createAction("@cctx-dev/layout/scroll-to-top"),
-  fetch:createAction("@cctx-dev/layout/fetch"),
-  load:createAction("@cctx-dev/layout/load",(layout:AppLayout) => ({layout})),
-  toggleMobileNav:createAction("@cctx-dev/layout/mobile-nav/toggle",(open?:boolean) => ({open})),
-  error:createAction("@cctx-dev/layout/error",(error:AppError) => ({error})),
+  scrollTop:createAction("@qs/layout/scroll-to-top"),
+  fetch:createAction("@qs/layout/fetch"),
+  load:createAction("@qs/layout/load",(layout:AppLayout) => ({layout})),
+  toggleMobileNav:createAction("@qs/layout/mobile-nav/toggle",(open?:boolean) => ({open})),
+  error:createAction("@qs/layout/error",(error:AppError) => ({error})),
 };

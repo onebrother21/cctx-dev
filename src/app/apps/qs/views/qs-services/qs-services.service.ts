@@ -11,19 +11,19 @@ export class QS_ServicesService {
     {
       label:"FAQ",
       text:"Got a question? Check here first.",
-      url:"/cctx/services/faq",
+      url:"/qs/services/faq",
       type:"fa",
       class:"fa fa-question-circle"
     },{
       label:"Live Chat",
       text:"Chat with our support team now.",
-      url:"/cctx/services/chat",
+      url:"/qs/services/chat",
       type:"fa",
       class:"fa fa-comment-dots"
     },{
       label:"Contact Us",
       text:"Our customer support is here for you.",
-      url:"/cctx/services/contact",
+      url:"/qs/services/contact",
       type:"fa",
       class:"fa fa-envelope"
     },

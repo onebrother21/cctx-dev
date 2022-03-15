@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class QS_HomeComponent {
   title = "qs-home";
+  greeting = "QS Audioverse has got your back!";
+  oneliner = "New things happening inside...";
 }

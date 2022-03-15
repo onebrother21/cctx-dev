@@ -16,35 +16,31 @@ export class QS_UserService {
     {
       label:"Launch Session",
       text:"Let's get to it!",
-      url:"/cctx/sessions/new",
+      url:"/qs/sessions/new",
       type:`code`,
     },{
       label:"Recent Sessions",
       text:`Creamy Crack,\n Project Anywhere,\n 8 more`,
-      url:"/cctx/sessions",
+      url:"/qs/sessions",
       type:`stack`,
     },{
       label:"Audioverse User Community",
       text:"See what's going on (eyeballs)...",
-      url:"/cctx/audioverse",
+      url:"/qs/audioverse",
       type:"users",
     },{
       label:"Account and Settings",
       text:"View or update my account details.",
-      url:"/cctx/user/me",
+      url:"/qs/user/me",
       type:"lock",
     },
   ];
-  previews:(QS_SessionRoomPreview|QS_Ad)[] = [
+  previews:QS_SessionRoomPreview[] = [
     {
-      type:"ad",
-      header:"I am an ad, please accidentally click me.",
-      content:"Fames ac turpis egestas integer. Viverra orci sagittis eu volutpat odio. "
-    },{
       type:"preview",
       name:"smokebaby",
       rank:29,
-      members:[{name:"Jackswift"},{name:"AshBeeee"}],
+      members:[{name:"DJ Monarch"}],
       duration:"6 hrs, 5 min",
       viewCt:1112,
       commentCt:56,
@@ -54,107 +50,70 @@ export class QS_UserService {
       name:"big chillin",
       rank:59,
       members:[{name:"Jackswift"}],
-      duration:"6 hrs, 5 min",
+      duration:"58 min",
       viewCt:1112,
       commentCt:56,
       img:"Biggie-in-the-studio.jpg",
     },{
+      type:"preview",
+      name:"advanced",
+      rank:59,
+      members:[{name:"Jackswift"},{name:"AshBeeee"}],
+      duration:"37 min",
+      viewCt:1112,
+      commentCt:56,
+      img:"studio-1.jpeg",
+    },{
+      type:"preview",
+      name:"fiesty freestyle",
+      rank:59,
+      members:[{name:"BreezeAwesome"},{name:"Two Chains"}],
+      duration:"16 hrs, 52 min",
+      viewCt:1112,
+      commentCt:56,
+      img:"JAMMING.jpg",
+    },{
+      type:"preview",
+      name:"two more hits",
+      rank:59,
+      members:[{name:"AshBeeee"}],
+      duration:"1 hr, 20 min",
+      viewCt:1112,
+      commentCt:56,
+      img:"How-to-Start-a-Band.jpg",
+    },{
+      type:"preview",
+      name:"the bar room, V2",
+      rank:59,
+      members:[{name:"SouthSide Slug"}],
+      duration:"18 min",
+      viewCt:1112,
+      commentCt:56,
+      img:"apricot-jam.jpg",
+    },
+  ];
+  ads:QS_Ad[] = [
+    {
       type:"ad",
       header:"I am an ad, please accidentally click me.",
       content:"Fames ac turpis egestas integer. Viverra orci sagittis eu volutpat odio. "
-    },{
-      type:"preview",
-      name:"advanced",
-      rank:59,
-      members:[{name:"Jackswift"},{name:"AshBeeee"}],
-      duration:"6 hrs, 5 min",
-      viewCt:1112,
-      commentCt:56,
-      img:"studio-1.jpeg",
-    },{
-      type:"preview",
-      name:"advanced",
-      rank:59,
-      members:[{name:"Jackswift"},{name:"AshBeeee"}],
-      duration:"6 hrs, 5 min",
-      viewCt:1112,
-      commentCt:56,
-      img:"studio-1.jpeg",
-    },{
-      type:"ad",
-      header:"I am an ad, please accidentally click me.",
-      content:"Fames ac turpis egestas integer. Viverra orci sagittis eu volutpat odio. "
-    },{
-      type:"preview",
-      name:"advanced",
-      rank:59,
-      members:[{name:"Jackswift"},{name:"AshBeeee"}],
-      duration:"6 hrs, 5 min",
-      viewCt:1112,
-      commentCt:56,
-      img:"studio-1.jpeg",
-    },{
-      type:"preview",
-      name:"advanced",
-      rank:59,
-      members:[{name:"Jackswift"},{name:"AshBeeee"}],
-      duration:"6 hrs, 5 min",
-      viewCt:1112,
-      commentCt:56,
-      img:"studio-1.jpeg",
-    },{
-      type:"preview",
-      name:"advanced",
-      rank:59,
-      members:[{name:"Jackswift"},{name:"AshBeeee"}],
-      duration:"6 hrs, 5 min",
-      viewCt:1112,
-      commentCt:56,
-      img:"studio-1.jpeg",
     },{
       type:"ad",
       header:"I am an ad, please accidentally click me.",
       content:"Fames ac turpis egestas integer. Viverra orci sagittis eu volutpat odio. "
     },{
-      type:"preview",
-      name:"advanced",
-      rank:59,
-      members:[{name:"Jackswift"},{name:"AshBeeee"}],
-      duration:"6 hrs, 5 min",
-      viewCt:1112,
-      commentCt:56,
-      img:"studio-1.jpeg",
+      type:"ad",
+      header:"I am an ad, please accidentally click me.",
+      content:"Fames ac turpis egestas integer. Viverra orci sagittis eu volutpat odio. "
     },{
-      type:"preview",
-      name:"advanced",
-      rank:59,
-      members:[{name:"Jackswift"},{name:"AshBeeee"}],
-      duration:"6 hrs, 5 min",
-      viewCt:1112,
-      commentCt:56,
-      img:"studio-1.jpeg",
-    },{
-      type:"preview",
-      name:"advanced",
-      rank:59,
-      members:[{name:"Jackswift"},{name:"AshBeeee"}],
-      duration:"6 hrs, 5 min",
-      viewCt:1112,
-      commentCt:56,
-      img:"studio-1.jpeg",
-    },{
-      type:"preview",
-      name:"advanced",
-      rank:59,
-      members:[{name:"Jackswift"},{name:"AshBeeee"}],
-      duration:"6 hrs, 5 min",
-      viewCt:1112,
-      commentCt:56,
-      img:"studio-1.jpeg",
+      type:"ad",
+      header:"I am an ad, please accidentally click me.",
+      content:"Fames ac turpis egestas integer. Viverra orci sagittis eu volutpat odio. "
     },
   ];
   constructor(private app:AppService){this.contactUsMsg = this.app.select(contactUsMsg$);}
   send(o:any){this.app.do(Navigation.go({url:this.getNextUserPage(o.type)}));}
+  randomIntFromInterval(min:number,max:number){return Math.floor(Math.random() * (max - min + 1) + min);}
   getNextUserPage(type:string){
     switch(type){
       case "signup":return "/secur01/verify";

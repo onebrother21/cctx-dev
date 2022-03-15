@@ -3,9 +3,9 @@ import { AppError } from '@state';
 import { ChatMsg } from "../models";
 
 export const ChatMessagesActions = {
-  fetch:createAction("@cctx-dev/chat-msgs/fetch"),
-  load:createAction("@cctx-dev/chat-msgs/load",(msgs:ChatMsg[]) => ({msgs})),
-  send:createAction("@cctx-dev/chat-msgs/send",(msg:ChatMsg) => ({msg})),
-  loadOne:createAction("@cctx-dev/chat-msgs/load-one",(msg:ChatMsg) => ({msg})),
-  error:createAction("@cctx-dev/chat-msgs/error",(error:AppError) => ({error})),
+  fetch:createAction("@qs/chat-msgs/fetch"),
+  load:createAction("@qs/chat-msgs/load",(msgs:ChatMsg[]) => ({msgs})),
+  send:createAction("@qs/chat-msgs/send",(msg:ChatMsg) => ({msg})),
+  loadOne:createAction("@qs/chat-msgs/load-one",(msg:ChatMsg) => ({msg})),
+  error:createAction("@qs/chat-msgs/error",(error:AppError) => ({error})),
 };

@@ -17,12 +17,12 @@ C6.9,115.6,25.2,125.2,43.2,126.9z"></path></svg>
               <p class="u-text u-text-palette-5-dark-2 u-text-4">
                 Collaborators:
                 <ng-container *ngFor="let o of session.members;let j = index">
-                  <a routerLink="/cctx/u/{{o.name.toLocaleLowerCase()}}"> {{o.name}}</a>
+                  <a routerLink="/qs/u/{{o.name.toLocaleLowerCase()}}"> {{o.name}}</a>
                   <span *ngIf="j !== session.members.length-1">,</span>
                 </ng-container><br>
                 <em>Last updated: {{session.updated}}.</em><br>
               </p>
-              <a routerLink="/cctx/sessions/{{session.id}}" class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-border-palette-1-base u-btn u-button-style 
+              <a routerLink="/qs/sessions/{{session.id}}" class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-border-palette-1-base u-btn u-button-style 
               u-hover-none u-none u-text-body-color u-text-hover-palette-2-base u-btn-1"> launch</a>
             </div>
           </div>

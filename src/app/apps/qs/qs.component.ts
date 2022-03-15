@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./qs.component.scss'],
 })
 export class QS_Component {
-  title = "cctx-apps";
+  title = "qs";
 }
