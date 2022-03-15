@@ -37,6 +37,7 @@ export class QS_UserService {
   ];
   previews:QS_SessionRoomPreview[] = [
     {
+      id:'01',
       type:"preview",
       name:"smokebaby",
       rank:29,
@@ -46,6 +47,7 @@ export class QS_UserService {
       commentCt:56,
       img:"she-on-fireree.jpg",
     },{
+      id:'02',
       type:"preview",
       name:"big chillin",
       rank:59,
@@ -55,6 +57,7 @@ export class QS_UserService {
       commentCt:56,
       img:"Biggie-in-the-studio.jpg",
     },{
+      id:'03',
       type:"preview",
       name:"advanced",
       rank:59,
@@ -64,6 +67,7 @@ export class QS_UserService {
       commentCt:56,
       img:"studio-1.jpeg",
     },{
+      id:'04',
       type:"preview",
       name:"fiesty freestyle",
       rank:59,
@@ -73,6 +77,7 @@ export class QS_UserService {
       commentCt:56,
       img:"JAMMING.jpg",
     },{
+      id:'05',
       type:"preview",
       name:"two more hits",
       rank:59,
@@ -82,6 +87,7 @@ export class QS_UserService {
       commentCt:56,
       img:"How-to-Start-a-Band.jpg",
     },{
+      id:'06',
       type:"preview",
       name:"the bar room, V2",
       rank:59,

@@ -26,7 +26,7 @@ export type QS_SessionRoom = Pick<QS_Session,"name"|"img"> & {
 };
 export type QS_SessionRoomPreview =
 Pick<QS_SessionRoom,"name"|"img"|"rank"> &
-Pick<QS_Session,"members"|"duration"> & {
+Pick<QS_Session,"id"|"members"|"duration"> & {
   type:"preview",
   viewCt?:number;
   commentCt?:number;

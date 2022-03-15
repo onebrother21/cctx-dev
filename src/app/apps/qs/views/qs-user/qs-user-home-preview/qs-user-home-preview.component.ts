@@ -11,6 +11,7 @@ import { QS_SessionRoomPreview } from '@qs-state';
 export class QS_UserHomePreviewComponent {
   title = "qs-user-home-preview";
   @Input() preview:QS_SessionRoomPreview = {
+    id:"00",
     type:"preview",
     name:"",
     img:"",
