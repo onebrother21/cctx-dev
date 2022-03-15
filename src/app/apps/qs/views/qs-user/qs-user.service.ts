@@ -59,7 +59,7 @@ export class QS_UserService {
     },{
       id:'03',
       type:"preview",
-      name:"advanced",
+      name:"advanced flex",
       rank:59,
       members:[{name:"Jackswift"},{name:"AshBeeee"}],
       duration:"37 min",
