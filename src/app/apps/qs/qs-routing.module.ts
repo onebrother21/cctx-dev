@@ -5,7 +5,7 @@ import { QS_Component } from './qs.component';
 const routes: Routes = [
   {path:"",component:QS_Component,children:[
     {path:"",loadChildren: () => import("./views/qs-home").then(m => m.QS_HomeModule)},
-    {path:"user",loadChildren: () => import("./views/qs-user").then(m => m.QS_UserModule)},
+    {path:"me",loadChildren: () => import("./views/qs-user").then(m => m.QS_UserModule)},
     {path:"secur01",loadChildren: () => import("./views/qs-auth").then(m => m.QS_AuthModule)},
     {path:"sessions",loadChildren: () => import("./views/qs-sessions").then(m => m.QS_SessionsModule)},
     {path:"services",loadChildren: () => import("./views/qs-services").then(m => m.QS_ServicesModule)},

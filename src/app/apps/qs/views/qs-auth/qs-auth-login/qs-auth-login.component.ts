@@ -14,6 +14,9 @@ export class QS_AuthLoginComponent {
     maxlength:4,
     masked:true
   };
-  constructor(private auth:QS_AuthService){}
-  submitPin(pin:string){this.auth.send({type:"login",pin});}
+  loading:boolean = false;
+  constructor(private auth:QS_AuthService){
+    this.auth.loading.subscribe(loading => this.loading = loading);
+  }
+  submitPin(pin:string){this.auth.send({action:"login",pin});}
 }

@@ -41,7 +41,28 @@ export class QS_SessionsService {
       created:"3/11/22 3:00pm",
       updated:"3/9/22 5:45pm",
       members:[{name:"Jackswift"}]
-    },
+    },/*{
+      id:"05",
+      name:"Project Anywhr",
+      duration:"5 min",
+      created:"3/11/22 3:00pm",
+      updated:"3/11/22 3:00pm",
+      members:[{name:"Jackswift"}]
+    },{
+      id:"06",
+      name:"Superfye!",
+      duration:"5 min",
+      created:"3/11/22 3:00pm",
+      updated:"3/10/22 11:00pm",
+      members:[{name:"Jackswift"}]
+    },{
+      id:"07",
+      name:"Pandora Bound",
+      duration:"5 min",
+      created:"3/11/22 3:00pm",
+      updated:"3/9/22 5:45pm",
+      members:[{name:"Jackswift"}]
+    },*/
   ];
   rooms:QS_SessionRoomPreview[] = [
     {

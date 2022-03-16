@@ -1,16 +1,16 @@
 #loading {
-  //position: absolute;
-  //left: 50%;
-  //top: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
   z-index: 2;
   width: 120px;
   height: 120px;
-  //margin: -76px 0 0 -76px;
+  margin: -76px 0 0 -76px;
   border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #2f4ace !important;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
+  border-radius: 30%;
+  border-top: 16px solid #800020 !important;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 @-webkit-keyframes spin {

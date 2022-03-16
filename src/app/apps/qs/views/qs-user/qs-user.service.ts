@@ -31,7 +31,7 @@ export class QS_UserService {
     },{
       label:"Account and Settings",
       text:"View or update my account details.",
-      url:"/qs/user/me",
+      url:"/qs/me/acct",
       type:"lock",
     },
   ];

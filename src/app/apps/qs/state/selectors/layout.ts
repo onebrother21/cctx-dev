@@ -1,7 +1,7 @@
 import {createSelector} from "@ngrx/store";
-import {cctxdev$} from "./app";
+import {qs$} from "./app";
 
-export const layout$ = createSelector(cctxdev$,s => s.layout);
+export const layout$ = createSelector(qs$,s => s.layout);
 export const header$ = createSelector(layout$,s => s.header);
 export const mobileNav$ = createSelector(layout$,s => s.mobileNav);
 export const footer$ = createSelector(layout$,s => s.footer);

@@ -11,7 +11,8 @@
         <form 
         class="u-clearfix u-form-spacing-24 u-form-vertical u-inner-form" 
         name="form">
-          <numpad (num)="submitPin($event)" [config]="pinConfig"></numpad>
+          <qs-loading-indicator [loading]="loading"></qs-loading-indicator>
+          <qs-numpad (num)="submitPin($event)" [config]="pinConfig"></qs-numpad>
           <input type="hidden" id="siteId" name="siteId" value="745822">
           <input type="hidden" id="pageId" name="pageId" value="749340">
           <input type="hidden" value="" name="recaptchaResponse">

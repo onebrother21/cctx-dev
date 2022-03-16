@@ -10,9 +10,11 @@ import { QS_AuthService } from '../qs-auth.service';
 export class QS_AuthSignInComponent {
   title = "qs-auth-signin";
   signinForm:FormGroup;
+  loading:boolean = false;
   constructor(private auth:QS_AuthService,private fb:FormBuilder){
+    this.auth.loading.subscribe(loading => this.loading = loading);
     this.signinForm = this.fb.group({
-      type:['signin',Validators.required],
+      action:['signin',Validators.required],
       username:['',Validators.required],
     });
   }
@@ -20,6 +22,6 @@ export class QS_AuthSignInComponent {
   submitForm(){
     const o = this.signinForm.value;
     this.auth.send(o);
-    this.signinForm.reset();
+    this.signinForm.reset({action:"signin",username:""});
   }
 }

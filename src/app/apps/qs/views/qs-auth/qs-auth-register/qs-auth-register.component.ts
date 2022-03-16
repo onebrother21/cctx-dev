@@ -11,9 +11,12 @@ import { QS_AuthService } from '../qs-auth.service';
 export class QS_AuthRegisterComponent {
   title = "qs-auth-register";
   registerForm:FormGroup;
+  loading:boolean = false;
   constructor(private auth:QS_AuthService,private fb:FormBuilder){
+    this.auth.loading.subscribe(loading => this.loading = loading);
     this.registerForm = this.fb.group({
-      type:['register',Validators.required],
+      action:['register',Validators.required],
+      username:['',Validators.required],
       firstname:['',Validators.required],
       lastname:['',Validators.required],
       age:['',Validators.required],
@@ -22,8 +25,16 @@ export class QS_AuthRegisterComponent {
   }
   get f(){return this.registerForm.controls;}
   submitForm(){
-    const o = this.registerForm.value;
+    const {firstname,lastname,..._o} = this.registerForm.value;
+    const o = {..._o,name:{first:firstname,last:lastname}};
     this.auth.send(o);
-    this.registerForm.reset();
+    this.registerForm.reset({
+      action:"register",
+      username:"",
+      firstname:"",
+      lastname:"",
+      age:"",
+      hometown:"",
+    });
   }
 }

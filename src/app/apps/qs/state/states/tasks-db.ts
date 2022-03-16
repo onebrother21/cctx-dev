@@ -15,14 +15,16 @@ export const taskTypes:TaskTypes = {
 export const agents:TaskAgent[] = [
   {
     username:"tiabia",
-    fullname:"Tia",
+    phn:"340-893-2724",
+    name:{first:"Tia",last:"McBia"},
     id:"sdsds",
     img:"lncnsjcnj",
     email:"sjhhhhhcdscj",
     created:new Date("11/22/2020")},
   {
     username:"jackswift",
-    fullname:"Jack",
+    phn:"904-247-8293",
+    name:{first:"Jack",last:"Johnson"},
     id:"sdsds",
     img:"lncnsjcnj",
     email:"jahscjbcywc",

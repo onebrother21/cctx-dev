@@ -4,3 +4,4 @@ export * from "./contact-us";
 export * from "./tasks";
 export * from "./chat-msgs";
 export * from "./app-user";
+export * from "./auth";

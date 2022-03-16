@@ -1,11 +1,12 @@
 import { ActionReducerMap } from '@ngrx/store';
-import { CCTXDevState } from '../states';
+import { QS_State } from '../states';
 import { LayoutReducer } from "./layout";
 import { NavigationReducer } from "./navigation";
 import { ContactUsReducer } from "./contact-us";
 import { TasksReducer } from "./tasks";
 import { ChatMessagesReducer } from './chat-msgs';
 import { AppUserReducer } from './app-user';
+import { AuthenticationReducer } from './auth';
 
 export const REDUCERS = {
   layout:LayoutReducer,
@@ -14,5 +15,5 @@ export const REDUCERS = {
   tasks:TasksReducer,
   msgs:ChatMessagesReducer,
   user:AppUserReducer,
-  
-} as ActionReducerMap<CCTXDevState>;
+  auth:AuthenticationReducer,
+} as ActionReducerMap<QS_State>;

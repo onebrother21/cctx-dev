@@ -1,5 +1,5 @@
 import {createSelector} from "@ngrx/store";
-import {cctxdev$} from "./app";
+import {qs$} from "./app";
 
-export const userState$ = createSelector(cctxdev$,s => s.user);
+export const userState$ = createSelector(qs$,s => s.user);
 export const appuser$ = createSelector(userState$,s => s.me);

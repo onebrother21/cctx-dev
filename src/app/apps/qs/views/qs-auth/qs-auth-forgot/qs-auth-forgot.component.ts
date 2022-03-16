@@ -11,7 +11,9 @@ import { QS_AuthService } from '../qs-auth.service';
 export class QS_AuthForgotComponent {
   title = "qs-auth-forgot";
   forgotForm:FormGroup;
+  loading:boolean = false;
   constructor(private auth:QS_AuthService,private fb:FormBuilder){
+    this.auth.loading.subscribe(loading => this.loading = loading);
     this.forgotForm = this.fb.group({
       type:['forgot',Validators.required],
       email:['',Validators.required],

@@ -1,4 +1,4 @@
 import {createFeatureSelector} from "@ngrx/store";
-import {CCTXDevState} from "../states";
+import {QS_State} from "../states";
 
-export const cctxdev$ = createFeatureSelector<CCTXDevState>("qs");
+export const qs$ = createFeatureSelector<QS_State>("qs");

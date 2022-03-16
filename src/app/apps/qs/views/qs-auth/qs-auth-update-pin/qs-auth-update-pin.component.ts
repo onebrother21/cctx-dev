@@ -15,10 +15,13 @@ export class QS_AuthUpdatePinComponent {
     maxlength:4,
     masked:true
   };
-  constructor(private auth:QS_AuthService){}
+  loading:boolean = false;
+  constructor(private auth:QS_AuthService){
+    this.auth.loading.subscribe(loading => this.loading = loading);
+  }
   submitPin(pin:string){
     if(!this.confirm){this.confirm = pin;this.greeting = "Confirm Your Pin";}
-    else if(this.confirm == pin) this.auth.send({type:"update-pin",pin});
+    else if(this.confirm == pin) this.auth.send({action:"update-pin",pin});
     else return;
   }
 }

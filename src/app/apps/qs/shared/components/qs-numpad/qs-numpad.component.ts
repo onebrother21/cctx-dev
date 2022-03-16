@@ -1,12 +1,12 @@
 import { Component,Output,EventEmitter,Input } from "@angular/core";
 
 @Component({
-  selector:"numpad",
-  templateUrl: "./numpad.html",
-  styleUrls:["numpad.scss"]
+  selector:"qs-numpad",
+  templateUrl: "./qs-numpad.component.html",
+  styleUrls:["qs-numpad.component.scss"]
 })
 
-export class NumberPadComponent {
+export class QS_NumberPadComponent {
   @Output() num = new EventEmitter<string>();
   @Input() config = {masked:false,minlength:4,maxlength:4};
   val = "";

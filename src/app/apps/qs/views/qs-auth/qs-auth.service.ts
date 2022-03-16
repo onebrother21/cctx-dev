@@ -3,23 +3,29 @@ import { AppService } from "@state";
 import {
   ContactUsActions as ContactUs,ContactUsMsg,contactUsMsg$,
   NavigationActions as Navigation,
+  AuthenticationActions as AUTH,
+  authLoading$
 } from "@qs-state";
 import { Observable } from "rxjs";
 
 @Injectable()
 export class QS_AuthService {
+  currentAction:string = "";
+  loading:Observable<boolean> = new Observable();
   contactUsMsg:Observable<ContactUsMsg|null> = new Observable();
-  constructor(private app:AppService){this.contactUsMsg = this.app.select(contactUsMsg$);}
-  send(o:any){this.app.do(Navigation.go({url:this.getNextAuthPage(o.type)}));}
-  getNextAuthPage(type:string){
-    switch(type){
-      case "signup":return "/secur01/verify";
-      case "verify":return "/secur01/register";
-      case "register":return "/secur01/update-pin";
-      case "signin":return "/secur01/login";
-      case "update-pin":
-      case "login":return "/user";
-      default:return "/";
+  constructor(private app:AppService){
+    this.contactUsMsg = this.app.select(contactUsMsg$);
+    this.loading = this.app.select(authLoading$);
+  }
+  send(o:any){
+    switch(o.action){
+      case "signup":this.app.do(AUTH.signup(o));break;
+      case "signin":this.app.do(AUTH.signin(o));break;
+      case "verify":this.app.do(AUTH.verify(o));break;
+      case "register":this.app.do(AUTH.register(o));break;
+      case "update-pin":this.app.do(AUTH.updatePin(o));break;
+      case "login":this.app.do(AUTH.login(o));break;
+      default:break;
     }
   }
 }

@@ -1,2 +1,9 @@
 import { AppEntity } from '@state';
-export type User = AppEntity & Record<"username"|"email"|"fullname"|"img",string>;
+export type AppUser = AppEntity &
+Record<"username"|"email"|"phn",string> &
+Partial<Record<"img"|"pin"|"code"|"token"|"hometown"|"loc"|"token",string>> &
+{
+  name:{first:string;last:string},
+  verified?:Date;
+  action?:string;
+};
