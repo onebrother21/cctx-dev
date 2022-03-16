@@ -18,28 +18,21 @@
           <strong>{{comment.user}}</strong> {{comment.body}}<br>
         </p>
         <form [formGroup]="sessionChatForm" (ngSubmit)="submitForm()">
-          <span>
-            <a (click)="react('😂')" style="cursor: pointer;">😂 </a>
-            <a (click)="react('🤣')" style="cursor: pointer;">🤣 </a>
-            <a (click)="react('💓')" style="cursor: pointer;">💓 </a>
-            <a (click)="react('💜')" style="cursor: pointer;">💜 </a>
-            <a (click)="react('😒')" style="cursor: pointer;">😒 </a>
-            <a (click)="react('😆')" style="cursor: pointer;">😆 </a>
-            <a (click)="react('😯')" style="cursor: pointer;">😯 </a>
-            <a (click)="react('😴')" style="cursor: pointer;">😴 </a>
-            <a (click)="react('🙄')" style="cursor: pointer;">🙄 </a>
-            <a (click)="react('🤔')" style="cursor: pointer;">🤔 </a>
-            <a (click)="react('🤯')" style="cursor: pointer;">🤯 </a>
-            <a (click)="react('🎊')" style="cursor: pointer;">🎊 </a>
-            <a (click)="react('🏆')" style="cursor: pointer;">🏆 </a>
-            <a (click)="react('👀')" style="cursor: pointer;">👀 </a>
-            <a (click)="react('🔥')" style="cursor: pointer;">🔥 </a>
-          </span>
           <div class="u-form-email u-form-group u-form-group-2">
             <label for="email-3b9a" class="u-form-control-hidden u-label">Comment</label>
             <input type="text" placeholder="Enter comment" id="email-3b9a" name="comment" formControlName="body" 
             class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-2" required="">
           </div><br>
+          <span>
+            <a (click)="react('🔥')" style="cursor: pointer;">🔥 </a>
+            <a (click)="react('😎')" style="cursor: pointer;">😎 </a>
+            <a (click)="react('😂')" style="cursor: pointer;">😂 </a>
+            <a (click)="react('😴')" style="cursor: pointer;">😴 </a>
+            <a (click)="react('🙄')" style="cursor: pointer;">🙄 </a>
+            <a (click)="react('🤮')" style="cursor: pointer;">🤮 </a>
+            <a (click)="react('🤯')" style="cursor: pointer;">🤯 </a>
+            <a (click)="react('💎')" style="cursor: pointer;">💎 </a>
+          </span>
           <button type="submit" class="u-active-grey-90 u-border-none u-btn u-btn-round u-button-style u-hover-grey-90 u-palette-1-base u-radius-8 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-2">
             <!--qs-icon [item]="{label:'',type:'download'}"></qs-icon>&nbsp;-->
             Add Comment
