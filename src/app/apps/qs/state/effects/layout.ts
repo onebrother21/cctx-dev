@@ -7,7 +7,7 @@ import { mergeMap,map,tap,catchError } from "rxjs/operators";
 import { AppError,AppService,AppRoute,route$ } from "@state";
 import { AppLayout } from "../models";
 import { LayoutState } from "../states";
-import { LayoutActions as Layout } from "../actions";
+import { LayoutActions as LAYOUT } from "../actions";
 import { LayoutService } from "../services";
 import { ROUTER_NAVIGATION, RouterNavigationAction } from "@ngrx/router-store";
 
@@ -21,16 +21,16 @@ export class LayoutEffects {
     ofType(ROUTER_NAVIGATION),
     map((action:RouterNavigationAction) => action.payload.routerState),
     mergeMap(() => ([
-      Layout.toggleMobileNav(false),
-      Layout.scrollTop(),
+      LAYOUT.toggleMobileNav(false),
+      LAYOUT.scrollTop(),
     ]))));
   ScrollToTop$:Observable<Action> = createEffect(() => this.actions$.pipe(
-    ofType(Layout.scrollTop),
+    ofType(LAYOUT.scrollTop),
     tap(() => this.app.win.scrollUp())),{dispatch:false});
   FetchLayout$:Observable<Action> = createEffect(() => this.actions$.pipe(
-    ofType(Layout.fetch),
+    ofType(LAYOUT.fetch),
     mergeMap(() =>
       this.layout.fetch().pipe(
-        map((layout:AppLayout) => Layout.load(layout)),
-        catchError(error => of(Layout.error(new AppError(error))))))));
+        map((layout:AppLayout) => LAYOUT.load(layout)),
+        catchError(error => of(LAYOUT.error(new AppError(error))))))));
 }

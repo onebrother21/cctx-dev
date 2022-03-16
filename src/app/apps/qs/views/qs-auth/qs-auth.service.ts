@@ -10,11 +10,8 @@ import { Observable } from "rxjs";
 
 @Injectable()
 export class QS_AuthService {
-  currentAction:string = "";
   loading:Observable<boolean> = new Observable();
-  contactUsMsg:Observable<ContactUsMsg|null> = new Observable();
   constructor(private app:AppService){
-    this.contactUsMsg = this.app.select(contactUsMsg$);
     this.loading = this.app.select(authLoading$);
   }
   send(o:any){

@@ -2,16 +2,11 @@ import { Injectable } from "@angular/core";
 import { AppService } from "@state";
 import {
   QS_Session,
-  QS_SessionComment,
-  ContactUsActions as ContactUs,ContactUsMsg,contactUsMsg$,
-  NavigationActions as Navigation,
   QS_SessionRoomPreview,
 } from "@qs-state";
-import { Observable, Subject } from "rxjs";
 
 @Injectable()
 export class QS_SessionsService {
-  contactUsMsg:Observable<ContactUsMsg|null> = new Observable();
   items:QS_Session[] = [
     {
       id:"01",
@@ -127,5 +122,5 @@ export class QS_SessionsService {
       img:"apricot-jam.jpg",
     },
   ];
-  constructor(private app:AppService){this.contactUsMsg = this.app.select(contactUsMsg$);}
+  constructor(private app:AppService){}
 }

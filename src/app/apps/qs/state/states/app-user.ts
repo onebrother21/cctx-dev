@@ -1,7 +1,7 @@
-import { CommonState,initializeCommonState,Entity } from "@state";
+import { CommonState,initializeCommonState } from "@state";
 import { AppUser } from "../models";
 
-export interface AppUserState extends CommonState<AppUser & Entity> {me?:AppUser;}
+export interface AppUserState extends CommonState {me?:AppUser;}
 export const initializeAppUser = ():AppUserState => ({
-  ...initializeCommonState(false,true),
+  ...initializeCommonState(false,false),
 });

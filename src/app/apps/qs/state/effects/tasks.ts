@@ -6,7 +6,7 @@ import { mergeMap,map,tap,catchError,withLatestFrom } from "rxjs/operators";
 
 import { AppError,AppService } from "@state";
 import { Task } from "../models";
-import { TasksActions as Tasks } from "../actions";
+import { TasksActions as TASKS } from "../actions";
 import { TasksService } from "../services";
 
 @Injectable()
@@ -15,15 +15,15 @@ export class TasksEffects implements OnInitEffects {
     private actions$:Actions,
     private tasks:TasksService,
     private app:AppService){}
-  ngrxOnInitEffects():Action {return Tasks.fetch();}
+  ngrxOnInitEffects():Action {return TASKS.fetch();}
   fetchTasks$:Observable<Action> = createEffect(() => this.actions$.pipe(
-    ofType(Tasks.fetch),
+    ofType(TASKS.fetch),
     mergeMap(() => this.tasks.fetch().pipe(
-      map((tasks:Task[]) => Tasks.load(tasks)),
-      catchError(error => of(Tasks.error(new AppError(error))))))));
+      map((tasks:Task[]) => TASKS.load(tasks)),
+      catchError(error => of(TASKS.error(new AppError(error))))))));
   createTask$:Observable<Action> = createEffect(() => this.actions$.pipe(
-    ofType(Tasks.create),
+    ofType(TASKS.create),
     mergeMap(({task}) => this.tasks.send(task).pipe(
-      map((task:Task) => Tasks.loadMore([task])),
-      catchError(error => of(Tasks.error(new AppError(error))))))));
+      map((task:Task) => TASKS.loadMore([task])),
+      catchError(error => of(TASKS.error(new AppError(error))))))));
 }

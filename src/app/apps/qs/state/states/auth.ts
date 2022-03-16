@@ -1,6 +1,7 @@
 import { CommonState,initializeCommonState,Entity } from "@state";
 
-export interface AuthenticationState extends CommonState<Entity> {}
+export interface AuthenticationState extends CommonState {status:any;}
 export const initializeAuth = ():AuthenticationState => ({
-  ...initializeCommonState(false,true),
+  ...initializeCommonState(false,false),
+  status:null,
 });

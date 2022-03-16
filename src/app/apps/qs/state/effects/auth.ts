@@ -8,7 +8,7 @@ import { AppError,AppService } from "@state";
 import { AppUser } from "../models";
 import { AuthenticationActions as AUTH,NavigationActions as NAV } from "../actions";
 import { AuthenticationService } from "../services";
-import { appuser$ } from "../selectors";
+import { me$ } from "../selectors";
 
 @Injectable()
 export class AuthenticationEffects {
@@ -29,7 +29,7 @@ export class AuthenticationEffects {
       catchError(error => of(AUTH.error(new AppError(error))))))));
   Verify$:Observable<Action> = createEffect(() => this.actions$.pipe(
     ofType(AUTH.verify),
-    withLatestFrom(this.app.select(appuser$)),
+    withLatestFrom(this.app.select(me$)),
     map(([o,_o]) => ({...o,username:_o?_o.username:""})),
     mergeMap(o => this.auth.verify(o).pipe(
       map(auth => AUTH.load(auth)),
@@ -41,14 +41,14 @@ export class AuthenticationEffects {
       catchError(error => of(AUTH.error(new AppError(error))))))));
   UpdatePin$:Observable<Action> = createEffect(() => this.actions$.pipe(
     ofType(AUTH.updatePin),
-    withLatestFrom(this.app.select(appuser$)),
+    withLatestFrom(this.app.select(me$)),
     map(([o,_o]) => ({...o,username:_o?_o.username:""})),
     mergeMap(o => this.auth.updatePin(o).pipe(
       map(auth => AUTH.load(auth)),
       catchError(error => of(AUTH.error(new AppError(error))))))));
   Login$:Observable<Action> = createEffect(() => this.actions$.pipe(
     ofType(AUTH.login),
-    withLatestFrom(this.app.select(appuser$)),
+    withLatestFrom(this.app.select(me$)),
     map(([o,_o]) => ({...o,username:_o?_o.username:""})),
     mergeMap(o => this.auth.login(o).pipe(
       map(auth => AUTH.load(auth)),

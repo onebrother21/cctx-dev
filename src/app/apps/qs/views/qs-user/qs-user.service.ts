@@ -6,12 +6,12 @@ import {
   QS_SessionRoomPreview,
   ContactUsActions as ContactUs,ContactUsMsg,contactUsMsg$,
   NavigationActions as Navigation,
+  userLoading$,
 } from "@qs-state";
 import { Observable } from "rxjs";
 
 @Injectable()
 export class QS_UserService {
-  contactUsMsg:Observable<ContactUsMsg|null> = new Observable();
   menu:QS_Icon[] = [
     {
       label:"Launch Session",
@@ -24,9 +24,9 @@ export class QS_UserService {
       url:"/qs/sessions",
       type:`stack`,
     },{
-      label:"Audioverse User Community",
+      label:"User Community",
       text:"See what's going on (eyeballs)...",
-      url:"/qs/audioverse",
+      url:"/qs/me/hm2",
       type:"users",
     },{
       label:"Account and Settings",
@@ -117,7 +117,8 @@ export class QS_UserService {
       content:"Fames ac turpis egestas integer. Viverra orci sagittis eu volutpat odio. "
     },
   ];
-  constructor(private app:AppService){this.contactUsMsg = this.app.select(contactUsMsg$);}
+  loading:Observable<boolean> = new Observable();
+  constructor(private app:AppService){this.loading = this.app.select(userLoading$);}
   send(o:any){this.app.do(Navigation.go({url:this.getNextUserPage(o.type)}));}
   randomIntFromInterval(min:number,max:number){return Math.floor(Math.random() * (max - min + 1) + min);}
   getNextUserPage(type:string){
