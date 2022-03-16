@@ -23,11 +23,11 @@ export type QS_SessionRoom = Pick<QS_Session,"name"|"img"> & {
   views?:number;
   comments?:string[];
   users?:QS_User[];
+  vid?:string;
 };
 export type QS_SessionRoomPreview =
-Pick<QS_SessionRoom,"name"|"img"|"rank"> &
+Pick<QS_SessionRoom,"name"|"img"|"rank"|"vid"> &
 Pick<QS_Session,"id"|"members"|"duration"> & {
-  type:"preview",
   viewCt?:number;
   commentCt?:number;
   userCt?:number;

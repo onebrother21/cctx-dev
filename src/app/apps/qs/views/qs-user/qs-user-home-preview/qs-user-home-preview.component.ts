@@ -12,9 +12,9 @@ export class QS_UserHomePreviewComponent {
   title = "qs-user-home-preview";
   @Input() preview:QS_SessionRoomPreview = {
     id:"00",
-    type:"preview",
     name:"",
     img:"",
+    vid:"",
     members:[],
     rank:0,
     duration:"",

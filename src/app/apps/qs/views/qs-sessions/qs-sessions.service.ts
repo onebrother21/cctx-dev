@@ -62,7 +62,6 @@ export class QS_SessionsService {
   rooms:QS_SessionRoomPreview[] = [
     {
       id:'01',
-      type:"preview",
       name:"smokebaby",
       rank:29,
       members:[{name:"DJ Monarch"}],
@@ -70,9 +69,9 @@ export class QS_SessionsService {
       viewCt:1112,
       commentCt:56,
       img:"she-on-fireree.jpg",
+      vid:"20220304_225731.mp4",
     },{
       id:'02',
-      type:"preview",
       name:"big chillin",
       rank:59,
       members:[{name:"Jackswift"}],
@@ -80,9 +79,9 @@ export class QS_SessionsService {
       viewCt:1112,
       commentCt:56,
       img:"Biggie-in-the-studio.jpg",
+      vid:"20210616_201432.mp4",
     },{
       id:'03',
-      type:"preview",
       name:"advanced flex",
       rank:59,
       members:[{name:"Jackswift"},{name:"AshBeeee"}],
@@ -90,9 +89,9 @@ export class QS_SessionsService {
       viewCt:1112,
       commentCt:56,
       img:"studio-1.jpeg",
+      vid:"20210911_190819.mp4",
     },{
       id:'04',
-      type:"preview",
       name:"fiesty freestyle",
       rank:59,
       members:[{name:"BreezeAwesome"},{name:"Two Chains"}],
@@ -100,9 +99,9 @@ export class QS_SessionsService {
       viewCt:1112,
       commentCt:56,
       img:"JAMMING.jpg",
+      vid:"20211126_213747.mp4",
     },{
       id:'05',
-      type:"preview",
       name:"two more hits",
       rank:59,
       members:[{name:"AshBeeee"}],
@@ -110,9 +109,9 @@ export class QS_SessionsService {
       viewCt:1112,
       commentCt:56,
       img:"How-to-Start-a-Band.jpg",
+      vid:"20211126_213833.mp4",
     },{
       id:'06',
-      type:"preview",
       name:"the bar room, V2",
       rank:59,
       members:[{name:"SouthSide Slug"}],
@@ -120,6 +119,7 @@ export class QS_SessionsService {
       viewCt:1112,
       commentCt:56,
       img:"apricot-jam.jpg",
+      vid:"20211221_153210.mp4",
     },
   ];
   constructor(private app:AppService){}
