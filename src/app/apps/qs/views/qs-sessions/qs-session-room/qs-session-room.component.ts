@@ -31,7 +31,7 @@ export class QS_SessionRoomComponent {
       if(this.newComments.length == 9) this.newComments.shift();
     });
     this.sessionChatForm = this.fb.group({
-      type:['comment',Validators.required],
+      action:['comment',Validators.required],
       body:['',Validators.required],
       user:['Jackswift',Validators.required],
     });
@@ -43,4 +43,5 @@ export class QS_SessionRoomComponent {
     this.comments.send(o);
     this.sessionChatForm.reset(this.blank);
   }
+  react(reaction:string){this.comments.send({user:'Jackswift',body:reaction});}
 }
