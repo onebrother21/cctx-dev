@@ -4,6 +4,7 @@ import { QS_IconMenuComponent } from './qs-icon-menu';
 import { QS_IconMenuItemComponent } from './qs-icon-menu-item';
 import { QS_NumberPadComponent } from './qs-numpad';
 import { QS_LoadingIndicatorComponent } from './qs-loading-indicator';
+import { QS_ReactionsComponent } from './qs-reactions';
 
 export const COMPONENTS = [
   QS_IconComponent,
@@ -12,4 +13,5 @@ export const COMPONENTS = [
   QS_BlueBoxComponent,
   QS_NumberPadComponent,
   QS_LoadingIndicatorComponent,
+  QS_ReactionsComponent,
 ];

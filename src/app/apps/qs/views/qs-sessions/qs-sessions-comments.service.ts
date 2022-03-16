@@ -32,7 +32,7 @@ export class QS_SessionsCommentsService {
   }
   randomIntFromInterval(min:number,max:number){return Math.floor(Math.random() * (max - min + 1) + min);}
   addRandomComment(){
-    const times = [500,1000,2000,3000,4000,5000];
+    const times = [1000,2000,3000,4000];
     const rndMsg = this.randomIntFromInterval(0,this.msgs.length - 1);
     const rndAuthor = this.randomIntFromInterval(0,this.authors.length - 1);
     const rndTime = this.randomIntFromInterval(0,times.length - 1);
