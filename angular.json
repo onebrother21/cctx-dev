@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "cctx-apps:build:production",
+            "firebaseProject": "cctx-apps",
+            "firebaseHostingSite": "cctx-apps"
+          }
         }
       }
     }

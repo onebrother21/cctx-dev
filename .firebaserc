@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cctx-apps": {
+      "hosting": {
+        "cctx-apps": [
+          "cctx-apps"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cctx-apps"
+  }
+}

@@ -26,4 +26,4 @@ import { SharedRoutingModule } from "./routing";
   providers: [...PROVIDERS]
 })
 export class SharedModule { }
-//export * from "./utils";
+export * from "./validators";

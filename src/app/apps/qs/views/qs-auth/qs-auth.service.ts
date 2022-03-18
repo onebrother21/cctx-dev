@@ -1,9 +1,7 @@
 import { Injectable } from "@angular/core";
 import { AppService } from "@state";
 import {
-  ContactUsActions as ContactUs,ContactUsMsg,contactUsMsg$,
-  NavigationActions as Navigation,
-  AuthenticationActions as AUTH,
+  QS_AuthenticationActions as AUTH,
   authLoading$
 } from "@qs-state";
 import { Observable } from "rxjs";
@@ -20,6 +18,7 @@ export class QS_AuthService {
       case "signin":this.app.do(AUTH.signin(o));break;
       case "verify":this.app.do(AUTH.verify(o));break;
       case "register":this.app.do(AUTH.register(o));break;
+      case "register-ext":this.app.do(AUTH.registerExt(o));break;
       case "update-pin":this.app.do(AUTH.updatePin(o));break;
       case "login":this.app.do(AUTH.login(o));break;
       default:break;
